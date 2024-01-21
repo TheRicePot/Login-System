@@ -1,47 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <div class="container">
-    <div class="boxes">
-      <div class="box">
-        <h2>Login</h2>
-        <p>Please Login</p>
-        <input type="text" id="username-input" class="dark-mode-textbox" placeholder="Enter your user.">
-        <input type="password" id="password-input" class="dark-mode-textbox" placeholder="Enter your password.">
-        <button onclick="authenticate()" class="button">Login</button>
-      </div>
-    </div>
-  </div>
 
-  <script>
-    
-    var users = [
-      { username: 'user1', password: 'pass1' },
-      { username: 'user2', password: 'pass2' },
-      // copy and paste the code below each user if u want to add more users
-    ];
+<!doctype html>
+<html>
+<head>
+    <title>Login System</title>
 
-    function authenticate() {
-      var username = document.getElementById('username-input').value;
-      var password = document.getElementById('password-input').value;
-
-      
-      var validUser = users.find(user => user.username === username && user.password === password);
-
-      if (validUser) {
-        // Set a cookie with the username
-        document.cookie = 'username=' + username + '; expires=' + new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString();
-
-        // Redirect to the main page (replace with your html file)
-        window.location.href = 'https://example.com/main';
-      } else {
-        alert('Invalid Password Message.');
-      }
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
     }
-  </script>
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Login System</h1>
+    <p>You have permission to use this as long as you credit me (ricepot) .</p>
+    <p><a href="code.txt">Code here.</a></p>
+</div>
 </body>
 </html>
